@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/utn_backgrund"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/logo_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/utn1" />
+
+    <TextView
+        android:id="@+id/textview_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/username_label"
+        android:textSize="@dimen/label_text_size"
+        app:layout_constraintBottom_toTopOf="@id/edittext_username"
+        app:layout_constraintStart_toStartOf="@id/edittext_username" />
+
+    <EditText
+        android:id="@+id/edittext_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/layout_margin"
+        android:background="@color/white"
+        android:hint="@string/username_hint"
+        android:inputType="textEmailAddress"
+        android:padding="@dimen/edit_text_padding"
+        app:layout_constraintBottom_toTopOf="@id/edittext_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo_banner"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/textview_passwordcheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password_check"
+        android:textColor="@color/utn_error_red"
+        android:textSize="@dimen/error_text_size"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/edittext_password"
+        app:layout_constraintTop_toBottomOf="@id/edittext_password"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textview_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password_label"
+        android:textSize="@dimen/label_text_size"
+        app:layout_constraintBottom_toTopOf="@id/edittext_password"
+        app:layout_constraintStart_toStartOf="@id/edittext_password" />
+
+    <EditText
+        android:id="@+id/edittext_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/layout_margin"
+        android:background="@color/white"
+        android:hint="@string/password_hint"
+        android:inputType="textPassword"
+        android:padding="@dimen/edit_text_padding"
+        app:layout_constraintBottom_toTopOf="@id/button_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_username" />
+
+    <TextView
+        android:id="@+id/textview_usernamecheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email_check"
+        android:textColor="@color/utn_error_red"
+        android:textSize="@dimen/error_text_size"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/edittext_username"
+        app:layout_constraintTop_toBottomOf="@id/edittext_username"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edittext_password" />
+
+    <ImageButton
+        android:id="@+id/button_toggle_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_view"
+        app:layout_constraintEnd_toEndOf="@id/edittext_password"
+        app:layout_constraintTop_toTopOf="@id/edittext_password"
+        app:layout_constraintBottom_toBottomOf="@id/edittext_password"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

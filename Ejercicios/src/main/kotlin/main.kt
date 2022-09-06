@@ -1,4 +1,5 @@
-package sumas
+import sumas.*
+import strings.*
 
 fun main(){
     println("¿Qué ejercicio vamos a probar hoy?")
@@ -6,7 +7,7 @@ fun main(){
 
     when (ejercicio){
         1 -> {
-
+            println("Bienvenido a la función 'suma'")
             println("Ingrese 5 números enteros en forma consecutiva:")
             suma1()
         }
@@ -26,6 +27,12 @@ fun main(){
             println("Bienvenido a la función 'promedio'")
             println("Ingrese numeros a calcular el promedio y por último presione enter")
             promedio()
+        }
+        5 -> {
+            println("Bienvenido a la función 'contar vocales'")
+            println("Ingrese el texto deseado y al final presione enter")
+            val nuevoTexto = readln()
+            contarVocales(nuevoTexto)
         }
         else -> println("El ejercicio indicado no existe o no se ha realizado aún")
     }
